@@ -2,13 +2,14 @@
 page_type: sample
 languages:
 - csharp
+- javascript
 products:
 - azure-iot-hub
-description: "This sample is the source code for the Data anomaly detection using Azure IoT Hub Learn module"
+description: "This sample is the source code for the Data anomaly detection using Azure IoT Hub Learn module, and the Manage your Azure IoT Hub with alerts and metrics Learn module."
 urlFragment: "data-anomaly-detection-using-azure-iot-hub"
 ---
 
-# Official Microsoft Sample
+# Data anomaly detection using Azure IoT Hub Learn module
 
 <!-- 
 Guidelines on README format: https://review.docs.microsoft.com/help/onboard/admin/samples/concepts/readme-template?branch=master
@@ -20,13 +21,16 @@ Taxonomies for products and languages: https://review.docs.microsoft.com/new-hop
 
 The sample here provides the source code that is created in the Data anomaly detection using Azure IoT Hub Learn module. This module creates an IoT Hub, a remote device, and simulated telemetry for a conveyor belt is sent to the IoT Hub. The telemetry focuses on the vibration levels of the conveyor belt. Data is routed both to an Event Hub for real-time analysis, and to Blob storage for archiving. How to set up and manage message routing is one of the key components of the module. The telemetry is visualized using Microsoft Power BI.
 
+The sample code is also used by the Learn module: Manage your Azure IoT Hub with alerts and metrics.
+
 ## Contents
 
 Outline the file contents of the repository. It helps users navigate the codebase, build configuration and any related assets.
 
 | File/folder       | Description                                |
 |-------------------|--------------------------------------------|
-| `C#\Program.cs`   | Sample C# source code.                        |
+| `Program.cs`      | Sample C# source code.                     |
+| `app.js`          | Sample Node.js source code.                |
 | `.gitignore`      | Define what to ignore at commit time.      |
 | `CHANGELOG.md`    | List of changes to the sample.             |
 | `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
@@ -47,7 +51,7 @@ Running the sample requires that the student go through all the steps of the Lea
 
 ## Key concepts
 
-A C# app is written in the module that shows how to write simulated vibration telemetry, in two messages. The first message is routed to Blob storage. The process of setting up Blob storage is explained, along with how to route data to it. The second message is routed to an IoT Event Hub. Both routes are sent to an Azure Stream Analytics job. The SQL query for the job sends the telemetry to a built-in ML model, that analyzes the data for anomalies. The output from this query is sent to Microsoft Power BI, for visualization.
+An app is written in the module that shows how to write simulated vibration telemetry, in two messages. The first message is routed to Blob storage. The process of setting up Blob storage is explained, along with how to route data to it. The second message is routed to an IoT Event Hub. Both routes are sent to an Azure Stream Analytics job. The SQL query for the job sends the telemetry to a built-in ML model, that analyzes the data for anomalies. The output from this query is sent to Microsoft Power BI, for visualization.
 
 ## Contributing
 
